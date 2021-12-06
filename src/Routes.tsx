@@ -1,0 +1,165 @@
+import { DropsRoutes, DropsRoutesConfig } from 'modules/drops/Routes';
+import {
+  StatementRoutes,
+  StatementRoutesConfig,
+} from 'modules/statement/Routes';
+import { MarketRoutes, MarketRoutesConfig } from 'modules/market/Routes';
+import {
+  ProfileRoutes,
+  ProfileRoutesConfig,
+} from 'modules/profile/ProfileRoutes';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import { BrandRoutes, BrandRoutesConfig } from './modules/brand/BrandRoutes';
+import {
+  BuyItemNFTRoutes,
+  BuyNFTRoutes,
+  BuyNFTRoutesConfig,
+} from './modules/buyNFT/BuyNFTRoutes';
+import {
+  Routes as CreateNFTRoutes,
+  RoutesConfiguration as CreateNFTRoutesConfig,
+} from './modules/createNFT/Routes';
+import { DefaultLayout } from './modules/layout/components/DefautLayout';
+import {
+  Routes as OverviewRoutes,
+  RoutesConfiguration as OverviewRoutesConfig,
+} from './modules/overview/Routes';
+import { PageNotFound } from './modules/router/components/PageNotFound';
+import { Themes } from './modules/themes/types';
+import { ArtList } from './modules/admin';
+
+export function Routes() {
+  return (
+    <Switch>
+      <Route exact path="/" render={() => <Redirect to="/index" />} />
+
+      <Route
+        exact
+        path={'/artList/page=:page'}
+        render={() => {
+          return (
+            <DefaultLayout headerTheme={Themes.dark}>
+              <ArtList />
+            </DefaultLayout>
+          );
+        }}
+      />
+
+      <Route
+        exact
+        path={OverviewRoutesConfig.Overview.path}
+        render={() => (
+          <DefaultLayout headerTheme={Themes.dark}>
+            <OverviewRoutes />
+          </DefaultLayout>
+        )}
+      />
+
+      <Route
+        exact
+        path={MarketRoutesConfig.Market.path}
+        render={() => (
+          <DefaultLayout>
+            <MarketRoutes />
+          </DefaultLayout>
+        )}
+      />
+
+      <Route
+        exact
+        path={[
+          CreateNFTRoutesConfig.CreateNft.path,
+          CreateNFTRoutesConfig.PublishNft.path,
+        ]}
+        render={() => (
+          <DefaultLayout>
+            <CreateNFTRoutes />
+          </DefaultLayout>
+        )}
+      />
+
+      <Route
+        exact
+        path={BuyNFTRoutesConfig.DetailsNFT.path}
+        render={() => (
+          <DefaultLayout isFooter={false}>
+            <BuyNFTRoutes />
+          </DefaultLayout>
+        )}
+      />
+
+      <Route
+        exact
+        path={BuyNFTRoutesConfig.Details_ITEM_NFT.path}
+        render={() => (
+          <DefaultLayout isFooter={false}>
+            <BuyItemNFTRoutes />
+          </DefaultLayout>
+        )}
+      />
+
+      <Route
+        exact
+        path={[
+          ProfileRoutesConfig.EditProfile.path,
+          ProfileRoutesConfig.UserProfile.path,
+          ProfileRoutesConfig.OtherProfile.path,
+          ProfileRoutesConfig.Collection.path,
+        ]}
+        render={() => (
+          <DefaultLayout>
+            <ProfileRoutes />
+          </DefaultLayout>
+        )}
+      />
+
+      <Route
+        exact
+        path={[
+          BrandRoutesConfig.ListBrand.path,
+          BrandRoutesConfig.CreateBrand.path,
+          BrandRoutesConfig.CreateCollectionItem.path,
+        ]}
+        render={() => (
+          <DefaultLayout>
+            <BrandRoutes />
+          </DefaultLayout>
+        )}
+      />
+
+      <Route
+        exact
+        path={[
+          DropsRoutesConfig.Drops.path,
+          DropsRoutesConfig.DropDetails.path,
+        ]}
+        render={() => (
+          <DefaultLayout headerTheme={Themes.dark} footerTheme={Themes.dark}>
+            <DropsRoutes />
+          </DefaultLayout>
+        )}
+      />
+
+      <Route
+        exact
+        path={[
+          StatementRoutesConfig.OurStory.path,
+          StatementRoutesConfig.TermsOfService.path,
+        ]}
+        render={() => (
+          <DefaultLayout>
+            <StatementRoutes />
+          </DefaultLayout>
+        )}
+      />
+
+      <Route
+        render={() => (
+          <DefaultLayout>
+            <PageNotFound />
+          </DefaultLayout>
+        )}
+      />
+    </Switch>
+  );
+}

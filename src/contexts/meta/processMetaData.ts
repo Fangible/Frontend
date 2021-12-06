@@ -1,0 +1,106 @@
+import {
+  decodeMetadata,
+  decodeEdition,
+  decodeMasterEdition,
+  Metadata,
+  ParsedAccount,
+  Edition,
+  MasterEditionV1,
+  MasterEditionV2,
+  MetadataKey,
+  METADATA_PROGRAM_ID,
+} from 'npms/oystoer';
+import { AccountInfo } from '@solana/web3.js';
+import { ProcessAccountsFunc } from './types';
+import { isValidHttpUrl } from '../../modules/common/utils/isValidHttpUrl';
+
+export const processMetaData: ProcessAccountsFunc = (
+  { account, pubkey },
+  setter,
+) => {
+  if (!isMetadataAccount(account)) return;
+
+  try {
+    if (isMetadataV1Account(account)) {
+      const metadata = decodeMetadata(account.data);
+
+      if (
+        isValidHttpUrl(metadata.data.uri)
+        // &&
+        // metadata.data.uri.indexOf('arweave') >= 0
+      ) {
+        const parsedAccount: ParsedAccount<Metadata> = {
+          pubkey,
+          account,
+          info: metadata,
+        };
+        setter('metadataByMint', metadata.mint, parsedAccount);
+      }
+    }
+
+    if (isEditionV1Account(account)) {
+      const edition = decodeEdition(account.data);
+      const parsedAccount: ParsedAccount<Edition> = {
+        pubkey,
+        account,
+        info: edition,
+      };
+      setter('editions', pubkey, parsedAccount);
+    }
+
+    if (isMasterEditionAccount(account)) {
+      const masterEdition = decodeMasterEdition(account.data);
+
+      if (isMasterEditionV1(masterEdition)) {
+        const parsedAccount: ParsedAccount<MasterEditionV1> = {
+          pubkey,
+          account,
+          info: masterEdition,
+        };
+        setter('masterEditions', pubkey, parsedAccount);
+
+        setter(
+          'masterEditionsByPrintingMint',
+          masterEdition.printingMint,
+          parsedAccount,
+        );
+
+        setter(
+          'masterEditionsByOneTimeAuthMint',
+          masterEdition.oneTimePrintingAuthorizationMint,
+          parsedAccount,
+        );
+      } else {
+        const parsedAccount: ParsedAccount<MasterEditionV2> = {
+          pubkey,
+          account,
+          info: masterEdition,
+        };
+        setter('masterEditions', pubkey, parsedAccount);
+      }
+    }
+  } catch {
+    // ignore errors
+    // add type as first byte for easier deserialization
+  }
+};
+
+export const isMetadataAccount = (account: AccountInfo<Buffer>) => {
+  return (account.owner as unknown as any) === METADATA_PROGRAM_ID;
+};
+
+export const isMetadataV1Account = (account: AccountInfo<Buffer>) =>
+  account.data[0] === MetadataKey.MetadataV1;
+
+export const isEditionV1Account = (account: AccountInfo<Buffer>) =>
+  account.data[0] === MetadataKey.EditionV1;
+
+export const isMasterEditionAccount = (account: AccountInfo<Buffer>) =>
+  account.data[0] === MetadataKey.MasterEditionV1 ||
+  account.data[0] === MetadataKey.MasterEditionV2;
+
+export const isMasterEditionV1 = (
+  me: MasterEditionV1 | MasterEditionV2,
+): me is MasterEditionV1 => {
+  return me.key === MetadataKey.MasterEditionV1;
+};

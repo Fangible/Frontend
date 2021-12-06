@@ -1,0 +1,261 @@
+import { Box, Container, Tooltip, Typography } from '@material-ui/core';
+import { Mutation } from '@redux-requests/react';
+import createDecorator from 'final-form-calculate';
+import { NftType } from 'modules/api/common/NftType';
+import { InputField } from 'modules/form/components/InputField';
+import { SelectField } from 'modules/form/components/SelectField';
+import { UploadAvatarField } from 'modules/form/components/UploadAvatarField';
+import { FormErrors } from 'modules/form/utils/FormErrors';
+import { t } from 'modules/i18n/utils/intl';
+import { GoBack } from 'modules/layout/components/GoBack';
+import { Button } from 'modules/uiKit/Button';
+import { Section } from 'modules/uiKit/Section';
+import React, { useCallback, useMemo } from 'react';
+import { Field, Form, FormRenderProps } from 'react-final-form';
+import { ReactComponent as QuestionIcon } from '../../../common/assets/question.svg';
+import { Bytes, convertBytesToMegabytes } from '../../../common/types/unit';
+import { createBrand } from '../../actions/createBrand';
+
+export interface ICreateBrandValues {
+  brandName: string;
+  standard: NftType;
+  description: string;
+  brandSymbol: string;
+  file: File;
+}
+
+const MAX_SIZE: Bytes = 31457280;
+const FILE_ACCEPTS: string[] = [
+  'image/png',
+  'image/jpeg',
+  'image/jp2',
+  'image/jpm',
+];
+
+const NAME_CHARACTER_LIMIT = 30;
+const SYMBOL_CHARACTER_LIMIT = 15;
+const DESCRIPTION_CHARACTER_LIMIT = 200;
+
+// https://final-form.org/docs/react-final-form/examples#calculated-fields
+const brandSymbolDecorator = createDecorator({
+  field: 'brandName',
+  updates: {
+    brandSymbol: (_ignoredValue, allValues) => {
+      const { brandName } = allValues as Partial<ICreateBrandValues>;
+      if (brandName) {
+        return brandName.replace(/\s/g, '').slice(0, 3).toUpperCase();
+      }
+    },
+  },
+});
+
+const validateCreateBrand = (payload: ICreateBrandValues) => {
+  const errors: FormErrors<ICreateBrandValues> = {};
+
+  if (!payload.brandName) {
+    errors.brandName = t('validation.required');
+  } else {
+    const reg = /^[^`'"“‘]{0,32}$/g;
+    if (!reg.test(payload.brandName)) {
+      errors.brandName = t('validation.invalid-name');
+    }
+  }
+
+  if (!payload.brandSymbol) {
+    errors.brandSymbol = t('validation.required');
+  }
+
+  if (!payload.file) {
+    errors.file = t('validation.required');
+  } else if (!FILE_ACCEPTS.includes(payload.file.type)) {
+    errors.file = t('validation.invalid-type');
+  } else if (payload.file.size > MAX_SIZE) {
+    errors.file = t('validation.max-size', {
+      value: convertBytesToMegabytes(MAX_SIZE),
+    });
+  }
+
+  return errors;
+};
+
+export const CreateBrand = () => {
+  const standardOptions = useMemo(
+    () => [
+      {
+        label: t(`create-nft.standardOption.${NftType.ERC721}`),
+        value: NftType.ERC721,
+      },
+      {
+        label: t(`create-nft.standardOption.${NftType.ERC1155}`),
+        value: NftType.ERC1155,
+      },
+    ],
+    [],
+  );
+
+  const handleSubmit = useCallback((payload: ICreateBrandValues) => {
+    // dispatch(createBrand(payload)).then(({ error }) => {
+    //   if (!error) {
+    //     replace(
+    //       ProfileRoutesConfig.UserProfile.generatePath(
+    //         ProfileTab.collections,
+    //       ),
+    //     );
+    //   }
+    // });
+
+    // HM 在这里创建 Collection
+
+    alert('创建 Collection');
+  }, []);
+
+  const renderForm = ({
+    handleSubmit,
+  }: FormRenderProps<ICreateBrandValues>) => {
+    return (
+      <Box component="form" onSubmit={handleSubmit}>
+        <Box mb={5}>
+          <Field
+            component={InputField}
+            name="brandName"
+            type="text"
+            label={t('collection.create.label.collection-name')}
+            color="primary"
+            fullWidth={true}
+            autoFocus
+            showLimitCounter={true}
+            inputProps={{
+              maxLength: NAME_CHARACTER_LIMIT,
+            }}
+          />
+        </Box>
+        <Box mb={5}>
+          <Field
+            component={SelectField}
+            name="standard"
+            type="text"
+            label={
+              <Box display="flex" alignItems="center">
+                {t('create-nft.label.standard')}
+
+                <Tooltip
+                  title={
+                    <>
+                      <p>{t('collection.create.tip-warning.ERC721')}</p>
+                      <p>{t('collection.create.tip-warning.ERC1155')}</p>
+                    </>
+                  }
+                >
+                  <Box component="i" ml={1}>
+                    <QuestionIcon />
+                  </Box>
+                </Tooltip>
+              </Box>
+            }
+            color="primary"
+            fullWidth={true}
+            options={standardOptions}
+          />
+        </Box>
+        <Box mb={5}>
+          <Field
+            component={InputField}
+            name="brandSymbol"
+            type="text"
+            color="primary"
+            fullWidth={true}
+            label={
+              <Box display="flex" alignItems="center">
+                {t('collection.create.label.collection-symbol')}
+
+                <Tooltip
+                  title={t('collection.create.tip-warning.collection-symbol')}
+                >
+                  <Box component="i" ml={1}>
+                    <QuestionIcon />
+                  </Box>
+                </Tooltip>
+              </Box>
+            }
+            showLimitCounter={true}
+            inputProps={{
+              maxLength: SYMBOL_CHARACTER_LIMIT,
+            }}
+          />
+        </Box>
+        <Box mb={5}>
+          <Field
+            component={InputField}
+            name="description"
+            type="text"
+            label={
+              <Box display="flex" alignItems="center">
+                {t('collection.create.label.description')}
+                <Tooltip title={t('collection.create.tip-warning.description')}>
+                  <Box component="i" ml={1}>
+                    <QuestionIcon />
+                  </Box>
+                </Tooltip>
+              </Box>
+            }
+            color="primary"
+            fullWidth={true}
+            rowsMax={10}
+            multiline
+            showLimitCounter={true}
+            inputProps={{
+              maxLength: DESCRIPTION_CHARACTER_LIMIT,
+            }}
+          />
+        </Box>
+
+        <Box mb={5}>
+          <Field
+            component={UploadAvatarField}
+            name="file"
+            label={t('collection.create.label.collection-avatar')}
+            accepts={FILE_ACCEPTS}
+          />
+        </Box>
+
+        <Box>
+          <Mutation type={createBrand.toString()}>
+            {({ loading }) => (
+              <Button size="large" type="submit" fullWidth loading={loading}>
+                {loading
+                  ? t('common.submitting')
+                  : t('collection.create.create-collection')}
+              </Button>
+            )}
+          </Mutation>
+        </Box>
+      </Box>
+    );
+  };
+
+  return (
+    <Section>
+      <Container maxWidth="sm">
+        <Box mb={3.5}>
+          <GoBack />
+        </Box>
+        <Box mb={6}>
+          <Typography variant="h1">
+            {t('collection.create.create-collection')}
+          </Typography>
+        </Box>
+        <Box>
+          <Form
+            onSubmit={handleSubmit}
+            render={renderForm}
+            validate={validateCreateBrand}
+            decorators={[brandSymbolDecorator] as any}
+            initialValues={{
+              standard: NftType.ERC721,
+            }}
+          />
+        </Box>
+      </Container>
+    </Section>
+  );
+};

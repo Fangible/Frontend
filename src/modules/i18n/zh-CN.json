@@ -1,0 +1,616 @@
+{
+  "artists": {
+    "title": "热门艺术家"
+  },
+  "collections": {
+    "items": "{num} NFT",
+    "no-items": "暂无NFT",
+    "title": "作品集"
+  },
+  "burn-token": {
+    "submit": "销毁",
+    "title": "销毁Token"
+  },
+  "buy-dialog": {
+    "buy-now": "立即购买",
+    "submit": "继续支付",
+    "buy": "购买",
+    "title": "确认",
+    "total": "总金额",
+    "current": "当前池子"
+  },
+  "change-wallet": {
+    "description": "变更为以太链，币安链或者火币链",
+    "network-change-error": "由于RPC节点错误，无法在Metamask上设置币安链网络",
+    "submit": "变更网络",
+    "title": "网络错误"
+  },
+  "collection": {
+    "card": {
+      "addNewItem": "添加新NFT",
+      "createNewItem": "创建新NFT",
+      "createNewcollection": "创建新作品集",
+      "itemsCount": "{value, plural, =0 {0 NFT} =1 {1 NFT} other {# NFT}}"
+    },
+    "create": {
+      "avatar-accepts": "支持 JPG, PNG, JPEG2000",
+      "avatar-recommended-size": "推荐300x300",
+      "create-collection": "创建作品集",
+      "label": {
+        "collection-avatar": "作品集头像",
+        "collection-name": "作品集名称",
+        "collection-symbol": "作品集标识",
+        "collection-url": "作品集网址",
+        "description": "描述"
+      },
+      "tip-warning": {
+        "collection-symbol": "作品集标识相当于一个品牌名的缩写。如：Bitcoin缩写为BTC。",
+        "ERC721": "ERC-721标准代表唯一独特的资产，在所有权和安全性方面具有不可改变、透明的特性，且最为广泛使用。每一个ERC-721 标准的代币都具有独一无二的合约价值。",
+        "ERC1155": "ERC-1155标准具有可替代和不可替代的双重性。在批量token转移方面更快和更具效率。虽只部署在单个智能合约上，但能用以铸造无限个token类型。",
+        "description": "讲述该作品集的创作初衷"
+      }
+    }
+  },
+  "common": {
+    "apply": "申请",
+    "close": "关闭",
+    "coming-soon": "敬请期待...",
+    "copied": "复制成功！",
+    "copy-to-clipboard": "复制到剪贴板",
+    "load-more": "加载更多",
+    "nothing-found": "暂无数据",
+    "quantity": "数量",
+    "price": "价格",
+    "read-more": "了解更多",
+    "reset": "重置",
+    "restore": "恢复",
+    "save": "保存",
+    "submitting": "提交",
+    "unknown": "未知",
+    "view-all": "查看所有",
+    "no": "否",
+    "yes": "是"
+  },
+  "connect-wallet": {
+    "custom-binancewallet": {
+      "description": "币安链& 智能链钱包",
+      "name": "币安链"
+    },
+    "custom-huobi": {
+      "description": "实用、方便，支持多种货币",
+      "name": "Huobi Wallet"
+    },
+    "custom-imtoken": {
+      "description": "便捷安全的电子钱包--百万用户的选择",
+      "name": "imToken"
+    },
+    "custom-math": {
+      "description": "通往区块链世界的门户",
+      "name": "Math Wallet"
+    },
+    "custom-trust": {
+      "description": "最受信任、最安全的电子货币钱包",
+      "name": "Trust Wallet"
+    },
+    "placeholder": {
+      "collection-title": "请连接钱包，以查看该作品集下的NFT",
+      "description": "请连接钱包，以浏览页面内容。",
+      "title": "连接钱包"
+    }
+  },
+  "create-collection-nft": {
+    "channelOption": {
+      "Comics": "漫画",
+      "FineArts": "艺术",
+      "Sports": "体育"
+    },
+    "label": {
+      "channel": "类型",
+      "description": "描述",
+      "name": "名称",
+      "standard": "标准",
+      "supply": "总量"
+    },
+    "standardOption": [
+      "ERC-721",
+      "ERC-1155"
+    ],
+    "submit": "创建",
+    "submitting": "正在创建中",
+    "title": "创建 NFT",
+    "collections": "作品集",
+    "subCollection": "创建NFT时，需要先创建一个作品集。之后可在该作品集中创建对应标准的NFT。"
+  },
+  "create-nft": {
+    "label": {
+      "Set-up-date": "定时出售",
+      "channel": "类型",
+      "description": "描述",
+      "name": "名称",
+      "specific-time-sale": "在特定时间出售",
+      "standard": "标准",
+      "supply": "总量",
+      "collection": "作品集"
+    },
+    "tip-warning": {
+      "description": "讲述创建该NFT背后的故事"
+    },
+    "next": "下一步",
+    "standardOption": [
+      "ERC-721",
+      "ERC-1155"
+    ],
+    "submit": "创建",
+    "submitting": "正在创建中",
+    "time": "{gender, select, male {He}female {She}other {They}}",
+    "title": "创建NFT"
+  },
+  "cropper": {
+    "flip-h": "水平翻转",
+    "flip-v": "垂直翻转",
+    "rotate-left": "向左旋转",
+    "rotate-right": "向右旋转"
+  },
+  "details-nft": {
+    "bid": {
+      "bid-placed": "出价成功"
+    },
+    "buy-now": "购买",
+    "descr-full": "详细描述",
+    "descr-short": "收起",
+    "pool-amount-tip": "铸造总副本数",
+    "dialog": {
+      "footnote": "进行中的拍卖，出价无法撤销。",
+      "input-info": "您的出价必须至少为 {value} {currency}"
+    },
+    "enter-a-bid": "请输入您的出价",
+    "history": {
+      "cancel-str": "已下架",
+      "claim-str": "已领回",
+      "create-str": "出售{quantity}个，价格为{price} {symbol}",
+      "offer-str": "出价 {price} {symbol} 购买 {quantity} 个"
+    },
+    "info": {
+      "date": "{value, date, medium}",
+      "time": "{value, time, short}",
+      "view-scan": "在{name}浏览器上查看"
+    },
+    "owner": {
+      "balance": "{balance} 份副本"
+    },
+    "place-a-bid": "出价",
+    "sold-out": "售罄",
+    "tabs": {
+      "bids": "出价",
+      "history": "历史",
+      "owners": "拥有者",
+      "token-info": "NFT详情"
+    },
+    "token-info": {
+      "contract": "合约：",
+      "name-tags": "标签：",
+      "standard": "标准：",
+      "token-id": "Token ID：",
+      "total-supply": "总供应量："
+    },
+    "tooltip": {
+      "bid-warning": "请注意，你在出价后将无法取消。你的出价将是有效的，直到它被出价、被创作者接受或过期"
+    },
+    "role": {
+      "seller": "拥有者",
+      "minter": "创建者",
+      "collection": "作品集"
+    },
+    "top-bid": "最高出价",
+    "your-bid": "您的出价"
+  },
+  "drop-details": {
+    "live": "进行中",
+    "sold": "已售出",
+    "timer-descr": "后开启",
+    "sold-for": "已售出  售价：",
+    "top-bid": "英式拍卖",
+    "fixed-price": "固价出售"
+  },
+  "drops": {
+    "previous": "Previous drops",
+    "top-creators": "Top Creators",
+    "upcoming": "Upcoming  dr🔥ps",
+    "label": {
+      "live": "Live",
+      "coming": "Coming",
+      "previous": "Previous"
+    }
+  },
+  "empty-data": {
+    "text": "请切换网络，以浏览页面内容",
+    "title": "抱歉，暂无数据"
+  },
+  "error": {
+    "data-is-not-available": "无法获取数据",
+    "greater-than": "数值需大于 {value}",
+    "less-than": "数值需小于 {value}",
+    "unexpected": "出现意外错误",
+    "contract-rejected": "合约操作被拒绝"
+  },
+  "form": {
+    "limit-counter": "{value}/{maxLimit}"
+  },
+  "go-back": {
+    "action": "返回"
+  },
+  "header": {
+    "collections": "我的作品集",
+    "connect": "连接钱包",
+    "create": "创建",
+    "disconnect": "断开连接",
+    "drops": "Dr🔥ps",
+    "how-it-works": "帮助指南",
+    "inventory": "我的主页",
+    "market": "市场",
+    "my-collections": "我的作品集",
+    "profile-settings": "主页设置",
+    "search": {
+      "collections": "作品集",
+      "empty": "无搜索结果",
+      "items": "NFT",
+      "placeholder": "按名字/创建者/作品集搜索...",
+      "users": "用户"
+    },
+    "select-chain": {
+      "bnb": "币安智能链",
+      "eth": "以太坊主网",
+      "heco": "火币生态链",
+      "heco-2": "火币钱包",
+      "polygon": "Polygon主网",
+      "title": "选择网络"
+    },
+    "network": {
+      "etherreum": "以太坊主网",
+      "binance": "币安智能链",
+      "rinkby": "Rinkeby测试链",
+      "heco": "火币生态链",
+      "polygon": "Polygon聚合链",
+      "unknow": "未知网络"
+    }
+  },
+  "info-prices": {
+    "cancel": "下架",
+    "canceled": "已下架",
+    "claim": "领取",
+    "claimed": "已领取",
+    "status": {
+      "Claimed": {
+        "creator": "NFT已售出",
+        "default": "NFT已领取"
+      },
+      "CompletedByDirectPurchase": {
+        "buyer": "NFT已售出，请领取您的NFT",
+        "creator": "NFT已售出，请领取您的收入",
+        "others": "NFT已售出"
+      },
+      "Live": {
+        "creator": "拍卖正在进行中"
+      },
+      "NotSoldByReservePrice": {
+        "buyer": "NFT未售出，请取回您的出价",
+        "creator": "NFT未出售，请取回您的NFT",
+        "others": "NFT未出售"
+      }
+    },
+    "royalty": {
+      "rate-desc": "{rate}的版税收入会归给创建者"
+    }
+  },
+  "language": {
+    "en-US": "English",
+    "zh-CN": "中文",
+    "ru-RU": "Русский"
+  },
+  "monthFormat": "{month, select, 1{一} 2{二} 3{三} 4{四} 5{五} 6{六} 7{七} 8{八} 9{九} 10{十} 11{十一} 12{十二}}月",
+  "movers": {
+    "title": "趋势榜"
+  },
+  "overview": {
+    "collections": {
+      "title": "热门作品集"
+    }
+  },
+  "product-panel": {
+    "all": "所有",
+    "art": "艺术",
+    "sports": "体育",
+    "comics": "漫画",
+    "collectible": "收藏品",
+    "music": "音乐",
+    "performer": "表演者",
+    "metaverse": "虚拟现实",
+    "games": "游戏"
+  },
+  "product-card": {
+    "not-on-sale": "未出售",
+    "price": "价格",
+    "top-bid": "最高出价",
+    "owner": "拥有者",
+    "put-on-sale": "出售",
+    "sold-for": "已售出  售价：",
+    "put-on-cancel": "取消出售",
+    "transfer": "发送token",
+    "pool-start-tips": "售卖开始倒计时：",
+    "burn": "销毁token",
+    "item-total-supply-tip": "总份数",
+    "item-balance-tip": "当前拥有份数: {balance}",
+    "pool-balance-tip": "当前可售份数: {balance}",
+    "sold-for-quantity": "已售出 {sold} / {quantity}"
+  },
+  "avatarsType": {
+    "collection": "作品集",
+    "creator": "创建者",
+    "owner": "拥有者"
+  },
+  "cancel-timer": {
+    "title": "取消出售",
+    "inner": "你确定取消该NFT的售卖吗?"
+  },
+  "products": {
+    "sort-label": "按 {value}筛选"
+  },
+  "profile": {
+    "date": {
+      "language": "zhCN",
+      "ago": "前"
+    },
+    "activity": {
+      "tab": {
+        "create": "创建",
+        "listings": "上架",
+        "bids": "出价",
+        "purchases": "购买",
+        "sales": "出售"
+      },
+      "canceled": "已取消",
+      "claimed": "已领取",
+      "created": "已创建",
+      "date": "日期",
+      "event": "活动",
+      "from": "由",
+      "item": "NFT",
+      "price": "金额",
+      "quantity": "数量",
+      "to": "转到",
+      "transfer": "发送"
+    },
+    "bids-categories": {
+      "Comicbooks": "漫画",
+      "Comics": "漫画",
+      "all": "所有",
+      "art": "艺术",
+      "sport": "体育",
+      "sports": "体育"
+    },
+    "bio": "个人简介",
+    "customize-btn": "自定义",
+    "edit": {
+      "label": {
+        "bio": "个人简介",
+        "custom-url": "自定义网站地址",
+        "email": "邮件",
+        "facebook": "Facebook",
+        "full-name": "全名",
+        "instagram": "Instagram",
+        "twitter": "Twitter",
+        "username": "用户名",
+        "website": "网站"
+      },
+      "no-profile": "请先完善个人信息",
+      "placeholder": {
+        "facebook": "Facebook主页链接",
+        "instagram": "Instagram主页链接",
+        "twitter": "Twitter主页链接",
+        "website": "网站链接"
+      },
+      "save-changes": "保存修改",
+      "success-message": "修改成功"
+    },
+    "edit-avatar": "编辑头像",
+    "edit-cover": "编辑主页封面",
+    "edit-profile": "编辑个人信息",
+    "edit-collection-cover": "编辑作品集封面",
+    "follow": {
+      "follow": "关注",
+      "following": "正在关注",
+      "followers": "关注者",
+      "unfollow": "取消关注",
+      "no-list": "列表为空",
+      "my-self": "自己"
+    },
+    "no-items": {
+      "btn": "浏览市场",
+      "descr": "您当前还未创造任何NFT",
+      "title": "暂无NFT",
+      "onSale-title": "暂无NFT",
+      "onSale-description": "您还未对任何NFT进行过上架。",
+      "showCase-title": "暂无NFT",
+      "showCase-description": "您当前还未拥有任何NFT。",
+      "MyBids-title": "暂无NFT",
+      "MyBids-description": "您还未对任何NFT进行过出价。浏览fangible市场吧！",
+      "Activity-title": "暂无动态数据",
+      "Activity-description": "探索fangible，发现新惊喜！",
+      "collection-title": "暂未数据",
+      "collection-description": "您尚未创建任何作品集",
+      "Liked-title": "暂无NFT",
+      "Liked-description": "您还未对任何NFT进行过点赞。浏览fangible市场吧！",
+      "other-onSale-title": "暂无数据",
+      "other-onSale-description": "该创建者尚未上架任何NFT。",
+      "other-collection-title": "暂无数据",
+      "other-collection-description": "该用户尚未创建任何作品集。",
+      "other-showCase-title": "暂无数据",
+      "other-showCase-description": "该用户尚未拥有任何NFT。",
+      "other-Liked-title": "暂无数据",
+      "other-Liked-description": "该创建者尚未对任何NFT进行过点赞。",
+      "tab-collection": {
+        "other-onSale-title": "暂无数据",
+        "other-onSale-description": "该创建者尚未上架任何NFT。",
+        "onSale-title": "暂无NFT",
+        "onSale-description": "您还未对任何NFT进行过上架。"
+      }
+    },
+    "subscribers": "Subscribers",
+    "tabs": {
+      "activity": "动态",
+      "collections": "作品集",
+      "followers": "粉丝",
+      "following": "关注",
+      "items": "NFT",
+      "liked": "收藏",
+      "my-bids": "我的交易",
+      "my-collections": "我的作品集",
+      "showcase": "我拥有的",
+      "my-sells": "我的出售",
+      "all-item": "所有NFT"
+    },
+    "unfollow": "取消关注",
+    "user-profile": "个人主页"
+  },
+  "promo": {
+    "created-by": "创建者："
+  },
+  "publish-nft": {
+    "auction-amount": "在拍卖方式中，您出售的NFT份数会被打包销售",
+    "auction-type": {
+      "english-auction": "英式拍卖",
+      "fixed-swap": "固价出售"
+    },
+    "error": {
+      "wrong-direct-bid-amount": "请确保：最低出价 < 直接购买价",
+      "wrong-direct-reserve-bid-amount": "请确保：最低出价 ≤ 最低购买价 < 直接购买价",
+      "wrong-reserve-bid-amount": "请确保：最低出价 ≤ 最低购买价"
+    },
+    "expire": "将于 {value, date, medium} {value, time, short}结束",
+    "fee": "Fangible平台费{value}%",
+    "label": {
+      "amount": "数量",
+      "count": "数量",
+      "directPurchase": "直接购买价",
+      "duration": "截止日期",
+      "minBid": "最低出价",
+      "price": "价格",
+      "reservePrice": "最低购买价",
+      "type": "出售方式"
+    },
+    "receive": "NFT成功出售后，您将收到 <b>{value} {unit}</b>",
+    "submit": "出售",
+    "submitting": "提交",
+    "title": "出售",
+    "tooltip": {
+      "directPurchase": "设置直接购买价后，买家可跳过竞拍流程，直接以该价格进行购买。直接购买价需大于最低出价和最低购买价。",
+      "duration": "拍卖将于该时间结束",
+      "reservePrice": "设置最低购买价后，若买家出价未达到或超过该价格，您的拍卖NFT将不会被出售。"
+    },
+    "royalty": {
+      "platform-fee": "Fangible平台费",
+      "royalty-fee": "版税费",
+      "royalty-fee-tip": "版税费会在NFT售出后，直接发送给其创建者",
+      "receive-fs": "每一售出的份数，你将获得",
+      "receive-ea": "你的实际收入取决于该笔售卖的最终成交价 "
+    }
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "share": "分享",
+    "telegram": "Telegram",
+    "website": "个人网站",
+    "title-for-socials": "{title} — {description}",
+    "put-on-sale": "出售",
+    "put-on-cancel": "取消",
+    "twitter": "Twitter"
+  },
+  "time": {
+    "days-left": "剩余{days}天",
+    "days-short": "{days}天",
+    "finished-on": "于{end, date, medium}结束",
+    "hours-short": "{hours}时",
+    "minutes-short": "{minutes}分",
+    "seconds-short": "{seconds}秒",
+    "time-left-short": "剩余{days} {hours} {minutes} {seconds}",
+    "time-left-short-hour": "剩余 {hours}:{minutes}:{seconds}",
+    "time-end": "结束时间： {days}/{months}/{years}",
+    "time-expired": "该拍卖已过期",
+    "time-over": "倒计时结束",
+    "time-left-tip": "剩余时间",
+    "time-left": "{days} {hours} {minutes} {seconds}"
+  },
+  "transfer-token": {
+    "submit": "发送",
+    "title": "发送Token"
+  },
+  "unit": {
+    "$-value": "$ {value}",
+    "BNB-value": "{value, number} BNB",
+    "custom-unit": "{value, number} {unit}",
+    "day": "{value, plural, =0 {0 days} =1 {1 day} other {# days}}"
+  },
+  "upload-file-field": {
+    "choose-file": "选择文件",
+    "file-data": "{fileName} {fileSize}MB",
+    "file-uploaded": "文件已上传",
+    "formats-many": "支持 {firstTypes} 或 {lastType}",
+    "formats-one": "仅支持 {fileType}",
+    "max-size": "最大尺寸：{value}MB",
+    "subtitle": "或 <strong>浏览</strong> 上传文件",
+    "title": "支持拖拽上传"
+  },
+  "validation": {
+    "invalid-email": "请输入有效的邮箱地址",
+    "invalid-facebook": "请输入有效的Facebook主页链接",
+    "invalid-instagram": "请输入有效的Instagram主页链接",
+    "invalid-twitter": "请输入有效的Twitter主页链接",
+    "invalid-type": "无效的文件类型",
+    "invalid-website": "请输入有效的网址",
+    "max": "最大值为Highest value is {value}",
+    "max-size": "最大文件尺寸：{value, number}MB",
+    "min": "最小值为Smallest value is {value}",
+    "require-integer": "请输入整数",
+    "required": "此为必填项",
+    "invalid-name": "名称限制32位并且“不允许包含· ` “ ’ ' ”"
+  },
+  "video-player": {
+    "unsupported": "对不起，您的浏览器不支持嵌入式视频或上传的视频文件类型！"
+  },
+  "royalty": {
+    "royalty": "版税费",
+    "royalties": "版税费",
+    "change": "更改",
+    "royalty-rate": "版税比例",
+    "royalty-rate-error": "版权比例设置范围为：0.1%到6.5%",
+    "royalty-rate-tip": "为您的作品集设置版税比例（0.1%到6.5%）设置生效时间约为30分钟。",
+    "royalty-desc": "设置版税比例后，版税费用的接收历史会列在此处。您的账户钱包地址可以实时接收版税费用。",
+    "royalty-change-tip": "修改成功！",
+    "table": {
+      "item": "NFT",
+      "price": "价格",
+      "quantity": "数量",
+      "fee": "版税收入",
+      "payout": "接收时间",
+      "empty": "您尚未收到任何版税收入"
+    }
+  },
+  "footer": {
+    "company": {
+      "company": "公司",
+      "ourStory": "关于fangible",
+      "myProfile": "个人主页",
+      "termsOfServices": "使用条款"
+    },
+    "help": {
+      "help": "帮助",
+      "getVerified": "成为签约艺术家",
+      "FAQ": "FAQ",
+      "support": "帮助"
+    },
+    "followUs": {
+      "followUs": "关注我们"
+    }
+  }
+}

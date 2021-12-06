@@ -1,0 +1,632 @@
+{
+  "artists": {
+    "title": "Featured Creators"
+  },
+  "collections": {
+    "items": "{num} items",
+    "no-items": "There are no items created yet",
+    "title": "Collection"
+  },
+  "burn-token": {
+    "submit": "Burn",
+    "title": "Burn Token"
+  },
+  "buy-dialog": {
+    "title": "Checkout",
+    "submit": "Proceed to pay",
+    "buy": "Buy",
+    "buy-now": "Buy now",
+    "total": "Total",
+    "current": "Current Pool"
+  },
+  "change-wallet": {
+    "description": "Change network to Ethereum Mainnet, Binance Smart Chain, or Heco",
+    "network-change-error": "Unable to set up BSC network on Metamask due to the provider error",
+    "submit": "Change network",
+    "title": "Wrong network"
+  },
+  "collection": {
+    "card": {
+      "addNewItem": "Add new NFT",
+      "createNewcollection": "Create new collection",
+      "createNewItem": "Create new item",
+      "itemsCount": "{value, plural, =0 {0 NFT} =1 {1 NFT} other {# NFTs}}"
+    },
+    "create": {
+      "avatar-accepts": "Supports JPG, PNG, JPEG2000",
+      "avatar-recommended-size": "300x300 Recommended",
+      "create-collection": "Create collection",
+      "label": {
+        "collection-avatar": "Collection avatar",
+        "collection-name": "Collection name",
+        "collection-symbol": "Collection symbol",
+        "collection-url": "Collection URL",
+        "description": "Description"
+      },
+      "tip-warning": {
+        "collection-symbol": "Collection Symbol is an abbreviated version of your brand name. Think of it as your collection logo in the form of an acronym (i.e. BTC for bitcoin). ",
+        "ERC721": "The ERC-721 token standard represents a single unique asset. It is immutable, transparent in ownership and security, and the most widely used. Each ERC-721 token holds its own unique contract values.",
+        "ERC1155": "The ERC-1155 is a dual purpose fungible and non fungible token. It’s faster and more efficient to use in batch token transfers and can be deployed in a single smart contract for an infinite number of token types.",
+        "description": "What's the story here?"
+      }
+    }
+  },
+  "common": {
+    "apply": "Apply",
+    "close": "Close",
+    "coming-soon": "Coming soon...",
+    "copied": "Copied!",
+    "copy-to-clipboard": "Copy to clipboard",
+    "load-more": "Load more",
+    "nothing-found": "Nothing found",
+    "quantity": "Quantity",
+    "price": "Price",
+    "read-more": "read more",
+    "reset": "Reset",
+    "restore": "Restore",
+    "save": "Save",
+    "submitting": "Submitting",
+    "unknown": "Unknown",
+    "view-all": "View all",
+    "no": "No",
+    "yes": "Yes"
+  },
+  "connect-wallet": {
+    "custom-binancewallet": {
+      "description": "Binance Chain & Smart Chain Wallet",
+      "name": "Binance Chain"
+    },
+    "custom-huobi": {
+      "description": "Multi-currency support, practical and convenient",
+      "name": "Huobi Wallet"
+    },
+    "custom-imtoken": {
+      "description": "Easy and secure digital wallet trusted by millions",
+      "name": "imToken"
+    },
+    "custom-math": {
+      "description": "Gateway to the World of Blockchain",
+      "name": "Math Wallet"
+    },
+    "custom-trust": {
+      "description": "The most trusted & secure crypto wallet",
+      "name": "Trust Wallet"
+    },
+    "placeholder": {
+      "collection-title": "To view collection items, you need to connect your wallet first",
+      "description": "The contents of this page are only viewable with a connected wallet",
+      "title": "Connect your wallet"
+    }
+  },
+  "create-collection-nft": {
+    "channelOption": {
+      "Comics": "Comics",
+      "FineArts": "Fine arts",
+      "Sports": "Sports"
+    },
+    "label": {
+      "channel": "Channel",
+      "description": "Description",
+      "name": "Name",
+      "standard": "Standard",
+      "supply": "Supply"
+    },
+    "standardOption": [
+      "ERC-721",
+      "ERC-1155"
+    ],
+    "submit": "Create",
+    "submitting": "Creating",
+    "title": "Create NFT",
+    "collections": "Collections",
+    "subCollection": "When creating your first NFT, you need to create a collection. For next creation, you can put the NFT in an already created collection."
+  },
+  "create-nft": {
+    "label": {
+      "Set-up-date": "Set up date and time",
+      "channel": "Channel",
+      "attributes": "Attributes",
+      "description": "Description",
+      "name": "Name",
+      "specific-time-sale": "Put on sale at a specific time",
+      "standard": "Standard",
+      "supply": "Supply",
+      "max-supply": "Max Supply",
+      "seller-fee-basis-points": "Royalty Percentage",
+      "seller-fee-basis-points-placeholder": "Between 0 and 15",
+      "collection": "Collection"
+    },
+    "tip-warning": {
+      "description": "What's the story behind this NFT?"
+    },
+    "next": "Next",
+    "standardOption": [
+      "ERC-721",
+      "ERC-1155"
+    ],
+    "submit": "Create",
+    "submitting": "Creating",
+    "time": "",
+    "title": "Create NFT"
+  },
+  "cropper": {
+    "flip-h": "Flip horizontal",
+    "flip-v": "Flip vertical",
+    "rotate-left": "Rotate left",
+    "rotate-right": "Rotate right"
+  },
+  "details-nft": {
+    "bid": {
+      "bid-placed": "Bid placed"
+    },
+    "buy-now": "Buy now",
+    "ClaimToken": "Claim NFT",
+    "ClaimSol": "Claim SOL",
+    "descr-full": "Full description",
+    "descr-short": "Collapse",
+    "pool-amount-tip": "Available for purchase / Total supply",
+    "item-amount-tip": "Total supply",
+    "dialog": {
+      "footnote": "Bids placed in auction cannot be withdrawn",
+      "input-info": "You must bid at least {value} {currency}"
+    },
+    "enter-a-bid": "Enter a Bid",
+    "history": {
+      "cancel-str": "Canceled",
+      "claim-str": "Claimed",
+      "create-str": "Put on sale {quantity} editions for {price} {symbol}",
+      "offer-str": "Offered {price} {symbol} for {quantity} edition"
+    },
+    "info": {
+      "date": "{value, date, medium}",
+      "time": "at {value, time, short}",
+      "view-scan": "View on {name}"
+    },
+    "owner": {
+      "balance": "{balance} copies"
+    },
+    "place-a-bid": "Place bid",
+    "sold-out": "Sold out",
+    "tabs": {
+      "bids": "Bids",
+      "history": "History",
+      "owners": "Owners",
+      "token-info": "NFT Details"
+    },
+    "token-info": {
+      "contract": "Contract:",
+      "name-tags": "Name Tags:",
+      "standard": "Standard:",
+      "token-id": "Token ID:",
+      "total-supply": "Total Supply:"
+    },
+    "tooltip": {
+      "bid-warning": "Please note that you will be unable to cancel after placing your bid. Your bid will be valid until it has been outbid, accepted by the creator or expires."
+    },
+    "role": {
+      "seller": "Owner",
+      "minter": "Creator",
+      "collection": "Collection"
+    },
+    "top-bid": "Top Bid",
+    "your-bid": "Your bid"
+  },
+  "drop-details": {
+    "live": "Live",
+    "sold": "Sold",
+    "timer-descr": "before the drop starts",
+    "sold-for": "Sold for",
+    "top-bid": "Top Bid",
+    "fixed-price": "Fixed Price"
+  },
+  "drops": {
+    "previous": "Previous drops",
+    "top-creators": "Top Creators",
+    "upcoming": "Upcoming  dr🔥ps",
+    "label": {
+      "live": "Live",
+      "coming": "Coming",
+      "previous": "Previous"
+    }
+  },
+  "empty-data": {
+    "text": "Switch to the correct network to view the contents of this page.",
+    "title": "Whoops! Looks like there's no data."
+  },
+  "error": {
+    "data-is-not-available": "Data is not available",
+    "greater-than": "It must be greater than {value}",
+    "less-than": "It must be less than {value}",
+    "unexpected": "Server exception",
+    "contract-rejected": "Contract operation is rejected"
+  },
+  "form": {
+    "limit-counter": "{value}/{maxLimit}"
+  },
+  "go-back": {
+    "action": "Go back"
+  },
+  "header": {
+    "collections": "Collections",
+    "connect": "Connect Wallet",
+    "create": "Create",
+    "disconnect": "Disconnect",
+    "drops": "Dr🔥ps",
+    "how-it-works": "How it works",
+    "inventory": "My profile",
+    "market": "Marketplace",
+    "my-collections": "My collections",
+    "profile-settings": "Profile settings",
+    "search": {
+      "collections": "Collections",
+      "empty": "No results found",
+      "items": "Items",
+      "placeholder": "Search by name, creator, collection...",
+      "users": "Users"
+    },
+    "select-chain": {
+      "bnb": "Binance Chain",
+      "eth": "Ethereum Mainnet",
+      "heco": "HECO Chain",
+      "heco-2": "Huobi Wallet",
+      "polygon": "Polygon Mainnet",
+      "title": "Select network"
+    },
+    "network": {
+      "etherreum": "Ethereum",
+      "binance": "Binance Smart Chain",
+      "rinkby": "Rinkeby Test Chain",
+      "heco": "Heco Chain",
+      "polygon": "Matic Chain",
+      "unknow": "Unknown network"
+    }
+  },
+  "info-prices": {
+    "cancel": "Cancel",
+    "canceled": "Canceled",
+    "claim": "Claim",
+    "claimed": "Claimed",
+    "status": {
+      "Claimed": {
+        "creator": "Item has been sold",
+        "default": "Item has been claimed"
+      },
+      "CompletedByDirectPurchase": {
+        "buyer": "Item has been sold, you can claim your NFT",
+        "creator": "Item has been sold, you can claim your money",
+        "others": "Item has been sold"
+      },
+      "Live": {
+        "creator": "Auction is in progress"
+      },
+      "NotSoldByReservePrice": {
+        "buyer": "Item hasn't been sold. Claim your funds back",
+        "creator": "Item hasn't been sold. Claim your NFT back",
+        "others": "Item hasn't been sold"
+      }
+    },
+    "royalty": {
+      "rate-desc": "A {rate} royalty will be issued to the Creator."
+    }
+  },
+  "language": {
+    "en-US": "English",
+    "zh-CN": "中文",
+    "ru-RU": "Русский"
+  },
+  "monthFormat": "{month, select, 1{January} 2{February} 3{March} 4{April} 5{May} 6{June} 7{July} 8{August} 9{September} 10{October} 11{November} 12{December}}",
+  "movers": {
+    "title": "Fast Movers"
+  },
+  "overview": {
+    "collections": {
+      "title": "Featured Collections"
+    }
+  },
+  "product-panel": {
+    "all": "All",
+    "art": "Art",
+    "sports": "Sports",
+    "comics": "Comics",
+    "collectible": "Collectible",
+    "music": "Music",
+    "performer": "Performer",
+    "metaverse": "Metaverse",
+    "games": "Games"
+  },
+  "product-card": {
+    "burn": "Burn token",
+    "not-on-sale": "Not on sale",
+    "owner": "Owner",
+    "price": "Price",
+    "put-on-sale": "Put on sale",
+    "put-on-cancel": "Cancel",
+    "sold-for": "Sold for",
+    "top-bid": "Top Bid",
+    "pool-start-tips": "The pool will start in:",
+    "transfer": "Transfer token",
+    "lost": "Your bid was lost",
+    "won": "Your bid won",
+    "outbid": "You were outbid",
+    "claim-funds": "Claim funds",
+    "claim-token": "Claim token",
+    "claim-back": "Claim back",
+    "claimed": "Claimed",
+    "item-total-supply-tip": "Total Supply",
+    "item-balance-tip": "{balance} editions in account",
+    "pool-balance-tip": "{balance} available for purchase",
+    "sold-for-quantity": "Sold {sold} of {quantity}"
+  },
+  "avatarsType": {
+    "collection": "Collection",
+    "creator": "Creator",
+    "owner": "Owner"
+  },
+  "cancel-timer": {
+    "title": "Cancel Sale",
+    "inner": "Are you sure you want to cancel this sale?"
+  },
+  "products": {
+    "sort-label": "Sort by: {value}"
+  },
+  "profile": {
+    "date": {
+      "language": "enUS",
+      "ago": " ago"
+    },
+    "activity": {
+      "tab": {
+        "create": "Create",
+        "listings": "Listings",
+        "bids": "Bids",
+        "purchases": "Purchases",
+        "sales": "Sales"
+      },
+      "canceled": "Canceled",
+      "claimed": "Claimed",
+      "created": "Created",
+      "date": "Date",
+      "event": "Event",
+      "from": "From",
+      "item": "Item",
+      "price": "Price",
+      "quantity": "Quantity",
+      "to": "To",
+      "transfer": "Transfer"
+    },
+    "bids-categories": {
+      "Comicbooks": "Comic",
+      "Comics": "Comics",
+      "all": "All",
+      "art": "Art",
+      "sport": "Sports",
+      "sports": "Sports"
+    },
+    "bio": "Bio",
+    "customize-btn": "Customize",
+    "edit": {
+      "label": {
+        "bio": "Bio",
+        "custom-url": "Custom URL",
+        "email": "Email",
+        "facebook": "Facebook",
+        "full-name": "Full Name",
+        "instagram": "Instagram",
+        "twitter": "Twitter",
+        "username": "Username",
+        "website": "Website"
+      },
+      "no-profile": "Please complete your profile setting first.",
+      "placeholder": {
+        "facebook": "Facebook Link",
+        "instagram": "Instagram Link",
+        "twitter": "Twitter Link",
+        "website": "Website Link"
+      },
+      "save-changes": "Save Changes",
+      "success-message": "Changes have been successfully applied"
+    },
+    "edit-avatar": "Edit avatar",
+    "edit-cover": "Edit profile cover",
+    "edit-profile": "Edit profile",
+    "edit-collection-cover": "Edit Collection Cover",
+    "follow": {
+      "follow": "Follow",
+      "following": "Following",
+      "followers": "Followers",
+      "unfollow": "Unfollow",
+      "no-list": "List Is Null",
+      "my-self": "Myself"
+    },
+    "no-items": {
+      "btn": "Browse marketplace",
+      "descr": "You have not minted any NFTs yet",
+      "title": "No items found",
+      "onSale-title": "No items found",
+      "onSale-description": "You haven’t listed any item for sale yet.",
+      "showCase-title": "No items found",
+      "showCase-description": "You haven’t owned any NFT yet.",
+      "MyBids-title": "No items found",
+      "MyBids-description": "You haven’t placed a bid for any item yet. Go browse our marketplace.",
+      "Activity-title": "No activities found",
+      "Activity-description": "Go explore fangible to find excitement!",
+      "Liked-title": "No items found",
+      "collection-title": "No collection found",
+      "collection-description": "You haven't create any collection yet. ",
+      "Liked-description": "You haven’t liked any NFT yet. Go browse our marketplace.",
+      "other-onSale-title": "No items found",
+      "other-onSale-description": "This user hasn't created any collection yet.",
+      "other-collection-title": "No collection found",
+      "other-collection-description": "No collection has been created by this user.",
+      "other-showCase-title": "No items found",
+      "other-showCase-description": "This user hasn't owned any NFT yet.",
+      "other-Liked-title": "No items found",
+      "other-Liked-description": "This user hasn't liked any NFT yet.",
+      "tab-collection": {
+        "other-onSale-title": "No items found",
+        "other-onSale-description": "This creator hasn't listed any item for sale yet.",
+        "onSale-title": "No items found",
+        "onSale-description": "You haven’t listed any item for sale yet."
+      }
+    },
+    "subscribers": "Subscribers",
+    "tabs": {
+      "activity": "Activity",
+      "collections": "Collections",
+      "followers": "Followers",
+      "following": "Following",
+      "items": "Items",
+      "liked": "Liked",
+      "my-bids": "My Bids",
+      "my-collections": "Collections",
+      "showcase": "Showcase",
+      "my-sells": "On Sale",
+      "all-item": "All Item"
+    },
+    "unfollow": "Unfollow",
+    "user-profile": "User profile"
+  },
+  "promo": {
+    "created-by": "Created by"
+  },
+  "publish-nft": {
+    "auction-amount": "In this auction, the copies put on sale will all be sold at once",
+    "auction-type": {
+      "english-auction": "English Auction",
+      "fixed-swap": "Fixed Price"
+    },
+    "error": {
+      "wrong-direct-bid-amount": "Make sure Minimum bid < Direct purchase price",
+      "wrong-direct-reserve-bid-amount": "Make sure Minimum bid ≤ Reserve price < Direct purchase price",
+      "wrong-reserve-bid-amount": "Make sure Minimum bid ≤ Reserve price"
+    },
+    "expire": "Will expire on {value, date, medium} {value, time, short}",
+    "fee": "Fangible fee {value}%",
+    "label": {
+      "amount": "Amount",
+      "count": "Count",
+      "directPurchase": "Direct purchase price",
+      "duration": "Expiration Date",
+      "minBid": "Minimum bid",
+      "price": "Sale price",
+      "reservePrice": "Reserve price",
+      "type": "Type of Sale"
+    },
+    "receive": "You will receive <b>{value} {unit}</b>",
+    "submit": "Put on sale",
+    "submitting": "Submitting",
+    "title": "Put on sale",
+    "tooltip": {
+      "directPurchase": "A direct transaction price can be set, that is, users can skip the bidding process and buy directly at this price. The direct transaction price must be greater than the Minimum bid and Reserve price.",
+      "duration": "Auction will be completed in this time",
+      "reservePrice": "Setting a reserve price creates a hidden limit. If you receive no bids equal to or greater than your reserve, your auction will not be sold."
+    },
+    "royalty": {
+      "platform-fee": "Fangible fee",
+      "royalty-fee": "Royalty fee",
+      "royalty-fee-tip": "Royalty fees are transferred to the NFT creator immediately after a sale.",
+      "receive-fs": "For each edition, you will receive",
+      "receive-ea": "Your earning will be based on the transaction price. "
+    }
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "share": "Share",
+    "telegram": "Telegram",
+    "website": "Website",
+    "title-for-socials": "{title} — {description}",
+    "put-on-sale": "Put on sale",
+    "put-on-cancel": "Cancel",
+    "twitter": "Twitter"
+  },
+  "time": {
+    "days-left": "{days} days left",
+    "days-short": "{days}d",
+    "finished-on": "Finished on {end, date, medium}",
+    "hours-short": "{hours}h",
+    "minutes-short": "{minutes}m",
+    "seconds-short": "{seconds}s",
+    "time-left-short": "{days} {hours} {minutes} {seconds} left",
+    "time-left-short-hour": "{hours}:{minutes}:{seconds} left",
+    "time-end": "Ended on {days}/{months}/{years}",
+    "time-expired": "Time expired",
+    "time-over": "Time is over",
+    "time-left-tip": "Time left",
+    "time-left": "{days} {hours} {minutes} {seconds}"
+  },
+  "transfer-token": {
+    "submit": "Transfer",
+    "title": "Transfer Token"
+  },
+  "unit": {
+    "$-value": "$ {value}",
+    "BNB-value": "{value, number} BNB",
+    "custom-unit": "{value, number} {unit}",
+    "day": "{value, plural, =0 {0 days} =1 {1 day} other {# days}}"
+  },
+  "upload-file-field": {
+    "choose-file": "Choose file",
+    "file-data": "{fileName} {fileSize}MB",
+    "file-uploaded": "File uploaded",
+    "formats-many": "Supports {firstTypes} or {lastType}",
+    "formats-one": "Supports {fileType} only",
+    "max-size": "Max {value}MB",
+    "subtitle": "or <strong>browse</strong> to choose a file",
+    "title": "Drop your item here"
+  },
+  "validation": {
+    "invalid-email": "Enter a valid Email",
+    "invalid-facebook": "Enter a valid facebook Website URL",
+    "invalid-instagram": "Enter a valid instagram Website URL",
+    "invalid-twitter": "Enter a valid twitter Website URL",
+    "invalid-type": "Invalid file type",
+    "invalid-website": "Enter a valid Website URL",
+    "max": "Highest value is {value}",
+    "max-size": "Max size is {value, number}MB",
+    "min": "Smallest value is {value}",
+    "require-integer": "This value should be a whole number",
+    "required": "This field is required",
+    "insufficient": "Insufficient SOL balance",
+    "invalid-name": "word limit: 32 characters. Please don't contain：` “ ’ ' ”"
+  },
+  "video-player": {
+    "unsupported": "Sorry, your browser does not support embedded videos or uploaded video file types!"
+  },
+  "royalty": {
+    "royalty": "Royalty",
+    "set-rayalty": "Set royalty",
+    "royalties": "Royalties",
+    "change": "Change",
+    "royalty-rate": "Royalty rate",
+    "royalty-rate-error": "Please select a royalty fee between 0.1% - 6.5% for your collection.",
+    "royalty-rate-tip": "Select a royalty fee between 0.1% - 6.5% for your collection. Royalties take about 30 minutes to be applied by the smart contract.",
+    "royalty-desc": "Once the royalty rate is set, payouts will be shwon here. The wallet address associated with your account will receive the royalties in real-time.",
+    "royalty-change-tip": "Royalty rate is changed.",
+    "table": {
+      "item": "Item",
+      "price": "Price",
+      "quantity": "Quantity",
+      "fee": "Fee Earned",
+      "payout": "Payout",
+      "empty": "You have not received any royalty yet."
+    }
+  },
+  "footer": {
+    "company": {
+      "company": "Company",
+      "ourStory": "Our Story",
+      "myProfile": "My Profile",
+      "termsOfServices": "Terms Of Services"
+    },
+    "help": {
+      "help": "Help",
+      "getVerified": "Get Verified",
+      "FAQ": "FAQ",
+      "support": "Support"
+    },
+    "followUs": {
+      "followUs": "Follow Us"
+    }
+  }
+}
